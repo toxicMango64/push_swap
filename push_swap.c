@@ -110,9 +110,9 @@ int	main(int ac, char **av)
 	// printf("pos = %d\n", pos);
 
 	t_stack *alias_list = ft_alias(list, array_size);
-	print(alias_list);
-	print(list);
-	// ft_sort_list(alias_list);
+	// print(alias_list);
+	// print(list);
+	ft_sort_list(alias_list);
 	// print(alias_list);
 	// print(list);
 	return (0);

@@ -41,15 +41,9 @@ int	ft_arr_check(char **splited_arr, int i, int k)
 {
 	k = 0;
 	if (ft_sign_check(splited_arr, i) == 0)
-	{
-		printf ("sign= {%s}{%c}\n", splited_arr[i], splited_arr[i][k]); // remove debug
 		k++;
-	}
 	while (splited_arr[i][k] != '\0')
-	{
-		printf ("number= {%s}{%c}\n", splited_arr[i], splited_arr[i][k]);
 		ft_check_digit(splited_arr[i][k++]);
-	}
 	if (splited_arr[i][k] && (!ft_isdigit(splited_arr[i][k]) && \
 			splited_arr[i][k] != 9 && splited_arr[i][k] != 32))
 		return (-1);
