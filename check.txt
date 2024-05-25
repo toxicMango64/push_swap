@@ -1,0 +1,5 @@
+1) the program should exit when ever there is an error in the parsing
+2) we have alot of functions in one folder....eeds organizing
+3) when we have three num and the smallest in the last and the gratest in the middle
+   ..printing the stack after sorting doesn't printf the last one
+   or acually there is only operation happened 
