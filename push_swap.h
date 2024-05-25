@@ -50,7 +50,8 @@ void	count_sort(int arr[], int n, int exp);
 int*	ft_join_array(size_t *array_size, int *array, char **str);
 
 int	ft_sign_check(char **splited_arr, int i);
-int	ft_check_digit(char **splited_arr, int i, int k);
+// int	ft_check_digit(char **splited_arr, int i, int k);
+int	ft_check_digit(char digit);
 int	ft_int_max_min(long long result);
 int	ft_flag_check(int broken);
 int	ft_arr_check(char **splited_arr, int i, int k);

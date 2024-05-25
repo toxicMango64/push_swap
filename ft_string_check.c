@@ -30,7 +30,6 @@ char	**ft_string_check(char *s)
 	i = 0;
 	broken = 0;
 	splited_arr = ft_split(s, ' ');
-	// casues error
 	while (splited_arr[i])
 	{
 		k = ft_arr_check(splited_arr, i, k);

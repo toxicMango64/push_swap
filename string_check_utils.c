@@ -17,21 +17,16 @@ int	ft_sign_check(char **splited_arr, int i)
 	if (splited_arr[i][0] == '-' || splited_arr[i][0] == '+')
 	{
 		if (!splited_arr[i][1])
-		{
-			perr("sign broblem\n");
-			return (69);
-		}
+			perr("sign broblem");
+		return (0);
 	}
-	return (0);
+	return (1);
 }
 
-int	ft_check_digit(char **splited_arr, int i, int k)
+int	ft_check_digit(char digit)
 {
-	if (splited_arr[i][k] && !ft_isdigit(splited_arr[i][k]))
-	{
+	if (digit && !ft_isdigit(digit))
 		perr ("not a digit");
-		return (69);
-	}
 	return (0);
 }
 
@@ -45,13 +40,16 @@ int	ft_int_max_min(long long result)
 int	ft_arr_check(char **splited_arr, int i, int k)
 {
 	k = 0;
-	if (ft_sign_check(splited_arr, i) != 0)
-		return (-1);
-	k++;
-	if (ft_check_digit(splited_arr, i, k) != 0)
-		return (-1);
-	while (splited_arr[i][k] && ft_isdigit(splited_arr[i][k]))
+	if (ft_sign_check(splited_arr, i) == 0)
+	{
+		printf ("sign= {%s}{%c}\n", splited_arr[i], splited_arr[i][k]); // remove debug
 		k++;
+	}
+	while (splited_arr[i][k] != '\0')
+	{
+		printf ("number= {%s}{%c}\n", splited_arr[i], splited_arr[i][k]);
+		ft_check_digit(splited_arr[i][k++]);
+	}
 	if (splited_arr[i][k] && (!ft_isdigit(splited_arr[i][k]) && \
 			splited_arr[i][k] != 9 && splited_arr[i][k] != 32))
 		return (-1);

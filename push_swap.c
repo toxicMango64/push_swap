@@ -12,6 +12,35 @@
 
 #include "push_swap.h"
 
+/**
+ * @brief 
+ * @param arr 
+ */
+void	free_arr(char **arr)
+{
+	ssize_t	i;
+
+	i = -1;
+	while (arr && arr[++i])
+		free(arr[i]);
+	free(arr);
+}
+
+/**
+ * @brief free every index of the node
+ * and the node itself
+ * @param node 
+ * @param node_size 
+ */
+void	free_node(char **node, int node_size)
+{
+	int	i;
+
+	i = 0;
+	while (i <= node_size)
+		free (node[i++]);
+	free(node);
+}
 
 t_stack *ft_alias(t_stack *list, int array_size)
 {
